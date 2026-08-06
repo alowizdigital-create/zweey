@@ -137,6 +137,30 @@ def _parse_cart(request):
     return lines_data, None
 
 
+# @login_required
+# @boutique_role_required(*MANAGE_ROLES)
+# def sale_create(request):
+#     if request.method == "POST":
+#         form = SaleForm(request.POST, boutique=request.boutique)
+#         lines_data, error = _parse_cart(request)
+#         if error:
+#             messages.error(request, error)
+#         elif form.is_valid():
+#             sale = services.build_sale(
+#                 boutique=request.boutique,
+#                 client=form.cleaned_data["client"],
+#                 created_by=request.user,
+#                 lines_data=lines_data,
+#             )
+#             messages.success(request, f"{sale.number} créée en brouillon.")
+#             return redirect("sales:sale_detail", sale_id=sale.id)
+#     else:
+#         form = SaleForm(boutique=request.boutique)
+
+#     return render(request, "sales/sale_form.html", {"form": form})
+
+
+
 @login_required
 @boutique_role_required(*MANAGE_ROLES)
 def sale_create(request):
@@ -158,7 +182,7 @@ def sale_create(request):
         form = SaleForm(boutique=request.boutique)
 
     return render(request, "sales/sale_form.html", {"form": form})
-
+    
 
 @login_required
 def sale_detail(request, sale_id):
