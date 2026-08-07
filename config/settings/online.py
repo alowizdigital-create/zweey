@@ -23,12 +23,12 @@ DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
 ALLOWED_HOSTS = env.list(
     "DJANGO_ALLOWED_HOSTS",
-    default=["test-test-pieq5n-70100d-187-124-117-45.sslip.io", "www.test-test-pieq5n-70100d-187-124-117-45.sslip.io", "api.test-test-pieq5n-70100d-187-124-117-45.sslip.io"],
+    default=["test.zweey.com/", "www.test.zweey.com/", "https://test.zweey.com/"],
 )
 
 CSRF_TRUSTED_ORIGINS = env.list(
     "DJANGO_CSRF_TRUSTED_ORIGINS",
-    default=["https://test-test-pieq5n-70100d-187-124-117-45.sslip.io", "https://www.test-test-pieq5n-70100d-187-124-117-45.sslip.io", "https://api.test-test-pieq5n-70100d-187-124-117-45.sslip.io"],
+    default=["https://test.zweey.com/", "https://test.zweey.com/", ""],
 )
 
 # DATABASES = {
