@@ -23,12 +23,12 @@ DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
 ALLOWED_HOSTS = env.list(
     "DJANGO_ALLOWED_HOSTS",
-    default=["test.zweey.com/", "www.test.zweey.com/", "https://test.zweey.com/"],
+    default=["test.zweey.com/", "www.test.zweey.com", "api.zweey.com/"],
 )
 
 CSRF_TRUSTED_ORIGINS = env.list(
     "DJANGO_CSRF_TRUSTED_ORIGINS",
-    default=["https://test.zweey.com/", "https://test.zweey.com/", ""],
+    default=["https://test.zweey.com", "https://wwww.test.zweey.com","https://api.test.zweey.com"],
 )
 
 # DATABASES = {
